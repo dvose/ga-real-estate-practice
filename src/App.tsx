@@ -4,9 +4,11 @@ import About from "./routes/About";
 import Careers from "./routes/Careers";
 import Home from "./routes/Home";
 import Navbar from './shared/Navbar';
+import { GlobalStyle } from 'shared/Styled';
 function App() {
   return (
     <>
+      <GlobalStyle />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

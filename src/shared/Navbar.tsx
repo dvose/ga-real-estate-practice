@@ -1,11 +1,36 @@
 import { Link } from "react-router-dom"
-const Navbar =()=>{
-      return (
-            <div>
-                  <Link to="/">Home</Link>
-                  <Link to="/about">About</Link>
-                  <Link to="/careers">Careers</Link>
-            </div>
-      )
-}
+import styled from "styled-components";
+import { PageGutter } from "./Styled";
+
+const StyledContainer = styled.div`
+  ${PageGutter};
+  padding-top: 18px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-bottom: 1px solid gray;
+`;
+
+const StyledLink = styled(Link)`
+  margin-right: 12px;
+  color: black;
+  text-decoration: none;
+  &:hover {
+    opacity: .6;
+  }
+`;
+
+const Logo = styled.span`
+  font-weight: bold;
+  margin-right: 12px;
+`;
+
+const Navbar = () => (
+  <StyledContainer>
+    <Logo>GA Real Estate Practice</Logo>
+    <StyledLink to="/">Home</StyledLink>
+    <StyledLink to="/about">About</StyledLink>
+    <StyledLink to="/careers">Careers</StyledLink>
+  </StyledContainer>
+)
 export default Navbar;

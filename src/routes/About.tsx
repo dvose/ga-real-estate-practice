@@ -1,5 +1,8 @@
+import { PageContainer } from "shared/Styled";
 
 const About = () => (
-  <h1>About</h1>
+  <PageContainer>
+    <h1>About</h1>
+  </PageContainer>
 );
 export default About;

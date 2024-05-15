@@ -1,5 +1,8 @@
+import { PageContainer } from "shared/Styled";
 
 const Careers = () => (
-  <h1>Careers</h1>
+  <PageContainer>
+    <h1>Careers</h1>
+  </PageContainer>
 );
 export default Careers;

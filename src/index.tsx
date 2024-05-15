@@ -4,10 +4,7 @@ import App from './App';
 import { HashRouter as Router } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
-console.log('test!');
-
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-console.log(root);
 root.render(
     <Router>
       <App />
