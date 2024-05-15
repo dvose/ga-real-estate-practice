@@ -5,6 +5,7 @@ import Question from 'shared/Question';
 import { Button, PageContainer } from 'shared/Styled';
 
 const Home = () => {
+  const [onlyMath, setOnlyMath] = useState(false);
   const [responses, setResponses] = useState(new Map<string, string>());
   const [score, setScore] = useState(0);
   const questionsMap =  useMemo(() => createQuestionsMap(QUESTIONS), []);
@@ -14,13 +15,18 @@ const Home = () => {
     if (responses.get(questionKey) === answer) {
       return;
     }
+    const response = responses.get(questionKey);
     setResponses(new Map(responses.set(questionKey, answer)));
     const question = questionsMap.get(questionKey);
     const correct = checkQuestionResponse(question, answer);
+    let oldVal: boolean | undefined | null;
+    if (response) {
+      oldVal = checkQuestionResponse(question, response);
+    }
     let newScore = score;
     if (correct) {
       newScore += 1;
-    } else if (newScore > 0) {
+    } else if (oldVal && newScore > 0) {
       newScore -= 1;
     }
     setScore(() => newScore);
@@ -29,8 +35,9 @@ const Home = () => {
   return (
   <PageContainer>
     <h1>Practice Test</h1>
+    <Button onClick={() => setOnlyMath(!onlyMath)}>{onlyMath ? 'Show All Questions' : 'Only Math Questions'}</Button>
     <h2>Score: {score} / {questions.length}</h2>
-    {questions.map((question, i) =>
+    {questions.filter(q => onlyMath ? q.math : true).map((question, i) =>
     <Question index={i} key={i} question={question} onChange={onResponse} selectedValue={responses.get(question.key)} />
     )}
   </PageContainer>
