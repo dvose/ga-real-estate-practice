@@ -1,4 +1,4 @@
-import { QUESTIONS } from 'Constants';
+import QUESTIONS from 'constants/questions';
 import { checkQuestionResponse, createQuestionsMap } from 'Utils';
 import { useMemo, useState } from 'react';
 import Question from 'shared/Question';
@@ -9,7 +9,7 @@ const Home = () => {
   const [asTest, setAsTest] = useState(false);
   const [showTestResults, setShowTestResults] = useState(false);
   const [unit, setUnit] = useState(1);
-  const units = [1,2,3,4,5,6,0];
+  const units = [1,2,3,4,5,6,7,0];
   const [responses, setResponses] = useState(new Map<string, string>());
   const [score, setScore] = useState(0);
   const questionsMap =  useMemo(() => createQuestionsMap(QUESTIONS), []);
