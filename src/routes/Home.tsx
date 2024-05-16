@@ -9,7 +9,7 @@ const Home = () => {
   const [asTest, setAsTest] = useState(false);
   const [showTestResults, setShowTestResults] = useState(false);
   const [unit, setUnit] = useState(1);
-  const units = [1,2,3,0];
+  const units = [1,2,3,4,0];
   const [responses, setResponses] = useState(new Map<string, string>());
   const [score, setScore] = useState(0);
   const questionsMap =  useMemo(() => createQuestionsMap(QUESTIONS), []);
