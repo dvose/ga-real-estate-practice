@@ -65,6 +65,11 @@ type QuestionProps = {
 const Question = ({mode, index, question, selectedValue, onChange}: QuestionProps) => (
   <StyledContainer>
     <div>{index + 1}) {question.body}</div>
+    {question.image &&
+    <div style={{marginTop: '12px'}}>
+      <img src={question.image} alt="question"/>
+    </div>
+    }
     {question.answers && question.answers.map((answer, i) =>
     <div className="radio" key={i}>
       <StyledRadioLabel mode={mode} correctAnswer={question.correctAnswer === answer} selected={selectedValue === answer}>

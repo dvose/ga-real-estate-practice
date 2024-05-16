@@ -2,7 +2,6 @@
   "name": "ga-real-estate-practice",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://dvose.github.io/ga-real-estate-practice",
   "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
