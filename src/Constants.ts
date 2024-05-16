@@ -3,7 +3,8 @@ export type Question = {
   body: string,
   answers: string[],
   correctAnswer: string,
-  math?: boolean
+  math?: boolean,
+  unit?: number
 };
 
 export const QUESTIONS: Question[] = [
@@ -349,5 +350,149 @@ export const QUESTIONS: Question[] = [
       "$55,000"
     ],
     correctAnswer: "$65,000"
+  },
+  {
+    key: "30",
+    body: "Property market value, based on established methods and using trained judgment, is performed by",
+    answers: [
+      "a real estate attorney.",
+      "real estate appraiser.",
+      "a real estate counselor.",
+      "a home inspector."
+    ],
+    correctAnswer: "real estate appraiser.",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "31",
+    body: "In general, when the supply of a certain commodity increases,",
+    answers: [
+      "price tends to rise.",
+      "price tends to drop.",
+      "demand for it tends to rise.",
+      "demand for it tends to drop."
+    ],
+    correctAnswer: "price tends to drop.",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "32",
+    body: "Which factor primarily affects supply in the real estate market?",
+    answers: [
+      "Population",
+      "Demographics",
+      "Employment",
+      "Governmental monetary policy"
+    ],
+    correctAnswer: "Governmental monetary policy",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "33",
+    body: "Which factor is MOST likely to influence demand for real estate?",
+    answers: [
+      "Number of real estate professionals in the area",
+      "Number of full-time real estate professionals in the area",
+      "Wage levels and employment opportunities",
+      "Price of new homes being built in the area"
+    ],
+    correctAnswer: "Wage levels and employment opportunities",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "34",
+    body: "Property management, appraisal, financing, and development are all examples of",
+    answers: [
+      "factors affecting demand.",
+      "specializations within the real estate industry",
+      "non-real estate professions.",
+      "activities requiring broker management and supervision."
+    ],
+    correctAnswer: "specializations within the real estate industry",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "35",
+    body: "What type of federal law prohibits discrimination in the provision of housing and housing-related services (including lending) based on an individual's race, color, national origin, religion, sex, familial status, or disability?",
+    answers: [
+      "Licensing",
+      "Lot size",
+      "Home ownership",
+      "Fair housing"
+    ],
+    correctAnswer: "Fair housing",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "36",
+    body: "A major manufacturer of automobiles announces that it will relocate one of its factories, along with 2,000 employees, to a small town. What effect will this announcement MOST likely have on the small town's housing market?",
+    answers: [
+      "Houses will likely become less expensive.",
+      "Houses will likely become more expensive.",
+      "Because the announcement involves an issue of demographics, not of supply and demand, housing prices will stay the same.",
+      "The announcement involves an industrial property; residential housing will not be affected."
+    ],
+    correctAnswer: "Houses will likely become more expensive.",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "37",
+    body: "A real estate professional who has several years of experience in the industry decided to retire from actively marketing properties. Now this person helps clients choose among the various alternatives involved in purchasing, using, or investing in property. What is this person's profession?",
+    answers: [
+      "Real estate counselor",
+      "Real estate appraiser",
+      "Real estate educator",
+      "Building inspector"
+    ],
+    correctAnswer: "Real estate counselor",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "38",
+    body: "Nationwide Multistate Licensing System and Registry was created to register",
+    answers: [
+      "appraisers.",
+      "property managers.",
+      "home inspectors.",
+      "mortgage loan originators."
+    ],
+    correctAnswer: "mortgage loan originators.",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "39",
+    body: "Schools would be considered part of which real estate classification?",
+    answers: [
+      "Special purpose",
+      "Industrial",
+      "Commercial",
+      "Residential"
+    ],
+    correctAnswer: "Special purpose",
+    math: false,
+    unit: 1
+  },
+  {
+    key: "40",
+    body: "When demand for a commodity decreases and supply remains the same,",
+    answers: [
+      "price tends to rise",
+      "price tends to fall",
+      "price is not affected",
+      "the market becomes stagnant"
+    ],
+    correctAnswer: "price tends to fall",
+    math: false,
+    unit: 1
   }
+
 ];
