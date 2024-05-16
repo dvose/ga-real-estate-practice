@@ -8,7 +8,7 @@ const StyledContainer = styled.div`
   font-size: 1.4em;
 `;
 
-const StyledRadioLabel = styled.label<{selected?: boolean, correctAnswer :boolean}>`
+const StyledRadioLabel = styled.label<{mode?: 'test' | 'study' | 'results', selected?: boolean, correctAnswer :boolean}>`
   display: block;
   margin-top: 8px;
   padding: 8px;
@@ -18,7 +18,7 @@ const StyledRadioLabel = styled.label<{selected?: boolean, correctAnswer :boolea
   border-radius: 6px;
   font-weight: ${props => props.selected ? 'bold' : 'initial'};
   color: ${props => {
-    if(!props.selected) {
+    if(!props.selected || (props.mode === 'test')) {
       return 'inherit';
     }
     if(props.correctAnswer) {
@@ -31,6 +31,9 @@ const StyledRadioLabel = styled.label<{selected?: boolean, correctAnswer :boolea
     if(!props.selected) {
       return 'transparent';
     }
+    if (props.mode === 'test') {
+      return 'black'
+    }
     if(props.correctAnswer) {
       return 'green';
     }
@@ -39,6 +42,9 @@ const StyledRadioLabel = styled.label<{selected?: boolean, correctAnswer :boolea
   &:hover {
     border-color: ${props => {
     if(!props.selected) {
+      return 'black';
+    }
+    if (props.mode === 'test') {
       return 'black';
     }
     if(props.correctAnswer) {
@@ -53,14 +59,15 @@ type QuestionProps = {
   index: number;
   question: QuestionType;
   selectedValue?: string;
+  mode?: 'test' | 'study' | 'results';
   onChange: (questionKey: string, answer: string) => void;
 };
-const Question = ({index, question, selectedValue, onChange}: QuestionProps) => (
+const Question = ({mode, index, question, selectedValue, onChange}: QuestionProps) => (
   <StyledContainer>
     <div>{index + 1}) {question.body}</div>
     {question.answers && question.answers.map((answer, i) =>
     <div className="radio" key={i}>
-      <StyledRadioLabel correctAnswer={question.correctAnswer === answer} selected={selectedValue === answer}>
+      <StyledRadioLabel mode={mode} correctAnswer={question.correctAnswer === answer} selected={selectedValue === answer}>
         <input type="radio" value={answer} checked={selectedValue === answer} onChange={() => onChange(question.key, answer)} />
         {answer}
       </StyledRadioLabel>

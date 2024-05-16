@@ -28,9 +28,8 @@ const Logo = styled.span`
 const Navbar = () => (
   <StyledContainer>
     <Logo>GA Real Estate Practice</Logo>
-    {false && <><StyledLink to="/">Home</StyledLink>
-    <StyledLink to="/about">About</StyledLink>
-    <StyledLink to="/careers">Careers</StyledLink></>}
+    <StyledLink to="/">Units</StyledLink>
+    <StyledLink to="/exam">Practice Exam</StyledLink>
   </StyledContainer>
 )
 export default Navbar;
