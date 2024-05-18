@@ -29,7 +29,7 @@ const Navbar = () => (
   <StyledContainer>
     <Logo>GA Real Estate Practice</Logo>
     <StyledLink to="/">Units</StyledLink>
-    <StyledLink to="/exam">Practice Exam</StyledLink>
+    <StyledLink to="/practice-exam">Practice Exam</StyledLink>
   </StyledContainer>
 )
 export default Navbar;

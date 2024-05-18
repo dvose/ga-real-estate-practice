@@ -25,7 +25,7 @@ import UNIT_7 from "./Unit7";
 import UNIT_8 from "./Unit8";
 import UNIT_9 from "./Unit9";
 
-const QUESTIONS = [
+export const UNIT_QUESTIONS = [
   ...UNIT_1, ...UNIT_2, ...UNIT_3, ...UNIT_4, ...UNIT_5,
   ...UNIT_6, ...UNIT_7, ...UNIT_8, ...UNIT_9, ...UNIT_10,
   ...UNIT_11, ...UNIT_12, ...UNIT_13, ...UNIT_14, ...UNIT_15,
@@ -33,4 +33,3 @@ const QUESTIONS = [
   ...UNIT_21, ...UNIT_22, ...UNIT_23, ...UNIT_24, ...UNIT_25,
   ...UNIT_26
 ];
-export default QUESTIONS;
